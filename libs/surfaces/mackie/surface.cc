@@ -377,8 +377,8 @@ Surface::setup_master ()
 {
 	boost::shared_ptr<Stripable> m;
 
-	if ((m = _mcp.get_session().monitor_out()) == 0) {
-		m = _mcp.get_session().master_out();
+	if ((m = _mcp.get_session().master_out()) == 0) {
+		m = _mcp.get_session().monitor_out();
 	}
 
 	if (!m) {
